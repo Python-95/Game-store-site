@@ -1,0 +1,56 @@
+.header
+    background: url(../img/header-bcg.png) center / cover no-repeat
+    grid-column: full-start / col-end 6
+    display: grid
+    grid-template-rows: 1fr min-content minmax(10rem, min-content) min-content
+    @include respond(tab-port)
+        grid-column: full-start / full-end
+    
+    &__btn
+        align-self: start
+        justify-self: start
+        
+    &__logo
+        width: 12rem
+        display: block
+        margin: 5rem auto 18rem
+    &-text
+        padding-left: 3vw
+        @include respond(phone)
+            padding: 0 5vw
+    &__line-text
+        padding-top: 12rem
+        @include respond(tab-port)
+            padding-top: 28rem
+    &__line-text
+        margin: 10vw  0 1.3rem
+        text-align: center
+        font-weight: 700
+        color: $color-gray-dark
+        display: grid
+        grid-template-columns: 1fr max-content 1fr
+        grid-column-gap: 2rem
+        align-items: center
+        
+        &::before, &::after
+            display: block
+            background-color: $color-gray-light
+            content: ""
+            height: .1rem
+            
+    &__img
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr))
+        grid-gap: 3rem
+        justify-items: center
+        align-items: end
+        filter: brightness(70%)
+        margin-bottom: 5rem
+        @include respond(tab-port)
+            align-items: end
+        @include respond(phone)
+            padding: 0 5vw
+        img
+            height: 2.5rem
+            max-width: 12.2rem
+        
